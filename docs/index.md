@@ -10,4 +10,7 @@ It has been designed to spin up quickly, and in airgapped environments.
 :caption: Getting Started
 
 intro.md
+release_notes.md
 installation.md
+architecture/architecture.md
+usage/usage.md
