@@ -1,5 +1,13 @@
 # Install
 
+## Infrastructure
+* It is recommended to use at least 2 Ubuntu 22/24 servers for a Patron installation
+* The first server is for the teamserver / core functionalities
+* The second server is for a redirector. The purpose is to:
+    1. Enable IPv6 agents.
+    2. Avoid callbacks directly to the teamserver.
+    3. Allow caching of agents when the teamserver is being updated.
+
 ## Normal Install with internet access
 * Run `git clone https://github.com/PatronC2/Patron.git`
 * Run `./install.sh -dps <your-ip>` for fresh install

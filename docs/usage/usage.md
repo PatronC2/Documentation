@@ -29,3 +29,16 @@
 * Enter your password, and the desired max age of the API token:
 ![alt text](images/user_api_key.png)
 * Direct Message your discord bot with `/patron configure <your-api-token>`
+
+## Redirectors
+* To install a redirector, create a fresh server. Either install docker first, or use ubuntu 22/24 to use the automatic installer.
+* It is suggested to have IPv6 configured already. Ensure an IPv6 appears when running `hostname -I`
+* From the Redirector panel in the UI, go to the Create New Redirector tab.
+* Set the Redirector Name, Description, and Listen Port.
+* Unless chaining multiple redirectors together, do not use the Forward IP and Forward Port options.
+![alt text](images/redirectors_create_redirector.png)
+* Once you click "Create Redirector", a download will start for a `redirector_install.sh`
+* Save this script locally.
+* Run this script on the server you created to run the redirector on.
+* After a few seconds, you should see your redirector online in the "Existing Redirectors' tab.
+![alt text](images/redirector_status.png)
