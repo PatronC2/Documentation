@@ -6,6 +6,7 @@ It has been designed to spin up quickly, and in airgapped environments.
 * [Github](https://github.com/PatronC2/Patron)
 * [Docker Hub](https://hub.docker.com/u/patronc2)
 * [Go Module](https://pkg.go.dev/github.com/PatronC2/Patron#section-readme)
+* [Discord](https://discord.gg/MMjhcnqPkH)
 
 ## 📚 Contents
 
