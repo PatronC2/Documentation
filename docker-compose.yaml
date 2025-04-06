@@ -1,0 +1,9 @@
+services:
+  docs:
+    build: .
+    volumes:
+      - .:/docs
+    working_dir: /docs
+    ports:
+      - "8000:8000"
+    command: sphinx-autobuild docs docs/_build/html --host 0.0.0.0 --port 8000 --watch .
