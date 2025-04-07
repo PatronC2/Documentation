@@ -15,4 +15,5 @@ source_suffix = {
 
 project = 'Patron C2'
 author = 'Patron C2'
+copyright = '2025, Patron C2'
 release = os.environ.get("READTHEDOCS_VERSION", "local")
