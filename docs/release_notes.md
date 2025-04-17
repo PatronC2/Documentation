@@ -5,4 +5,4 @@
 * Fix bug where agents show as offline while changing the callback frequency
 
 ## Release v1.3.0
-This is the first stable release of Patron
+* This is the first stable release of Patron
