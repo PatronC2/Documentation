@@ -63,6 +63,15 @@
 * In the home tab, we can now see our agent!
 ![alt text](images/home_active_agents.png)
 * To interact with the agent, click on it.
+
+## Searching
+* To search for agents, use the filters on the right side of the table.
+* Search by Hostname, IP, or tags.
+* When filtering by tags, use either
+    * "Any Tag Match" to OR all selected tags.
+    * "All Tags Must Match" to AND selected tags.
+![alt text](images/home_agent_filters.png) 
+
 ### Commands
 * For linux agents, the default shell is bash.
 * For Windows agents, the default shell is powershell.
