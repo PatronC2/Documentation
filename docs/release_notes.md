@@ -1,5 +1,11 @@
 # Release Notes
 
+## Release 1.3.4
+* Use multi-stage build for the UI
+* Reduce the size of the UI image
+* Reduce frontend startup time
+* Fix bug in Payloads page, where the "Delete" button was not visible when working in airgapped environments.
+
 ## Release 1.3.3
 * Added the `/api/agents/search` API endpoint to return specific agents based on attributes
 * Added the `/api/agentsmetrics` API endpoint to return Online / Offline agents

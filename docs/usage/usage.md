@@ -103,5 +103,4 @@
 ![alt text](images/agents_notes.png)
 ### Tags
 * The tags tab allows you to put identifiers for your agents.
-* This feature is under development. Search by tag is not supported yet.
 ![alt text](images/agents_tags.png)
