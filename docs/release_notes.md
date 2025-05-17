@@ -1,5 +1,10 @@
 # Release Notes
 
+## Release v1.3.5
+* Bump all golang Patron apps to go 1.24.3
+* Bump UI to node 24
+* Linux Agents no longer officially supported for kernels older than 3.2
+
 ## Release v1.3.4
 * Use multi-stage build for the UI
 * Reduce the size of the UI image
