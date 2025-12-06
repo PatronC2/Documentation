@@ -1,5 +1,8 @@
 # Release Notes
 
+## Release v1.3.6
+* Patches for frontend
+
 ## Release v1.3.5
 * Bump all golang Patron apps to go 1.24.3
 * Bump UI to node 24
