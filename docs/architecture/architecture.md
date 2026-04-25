@@ -48,3 +48,11 @@ The Patron UI is built using React.js.
 ### Limitations
 * Currently does not support IPv6 via the default installer. 
 * There are various bugs in the styling. The development team is aware. The v3 UI is slated for development in the near future to improve this, as well as reducing the UI startup time.
+
+## OpenSearch
+### Overview
+* This comes directly from OpenSearch. It is used for indexing keylogs, data from agent named pipes, and data from agent unix sockets.
+
+## Indexer
+### Overview
+* This handles loading new data from the database into opensearch every 15 seconds.
