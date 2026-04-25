@@ -36,7 +36,7 @@
 * From the Redirector panel in the UI, go to the Create New Redirector tab.
 * Set the Redirector Name, Description, and Listen Port.
 * Unless chaining multiple redirectors together, do not use the Forward IP and Forward Port options.
-![alt text](images/redirectors_create_redirector.png)
+![alt text](images/redirectors_create_redirector_1.png)
 * Once you click "Create Redirector", a download will start for a `redirector_install.sh`
 * Save this script locally.
 * Run this script on the server you created to run the redirector on.
@@ -45,18 +45,16 @@
 
 ## Payloads
 * Once a Redirector is created, it is time to create an agent to call back to this redirector
-* In "Create New Payload" tab, set the Payload Name and Description
-* Set the Type per your desired OS and if you desire the keylogger. For linux, the keylogger version requires root. The Windows payloads do not require root. However, the keylogger is only per-user.
-* Set the Listener IP to the IP of your redirector.
-* Set the Listener Port to the IP of your redirector.
-* Set the Call Back frequency to the desired number of seconds.
-* Set the Call Back Jitter to the destired %. It is suggested anywhere from a 50-90% jitter.
-* Unless debugging, keep Enable Logging to False.
-* If desired, enable the Compression.
-* Hit "Create Payload". This will take some time, but you will receive a notification upon completion.
-![alt text](images/payloads_create_payload.png)
-* Payloads can be downloaded via the links on the "Existing Payloads" tabs.
-![alt text](images/payloads_existing_payloads.png)
+* Click "Create New Payload"
+* Select the OS for the agent
+![alt text](images/payloads_create_payload_1.png)
+* Select one of the available payload types.
+![alt text](images/payloads_create_payload_2.png)
+* Select one of the online listeners, jitter, and callback frequency
+![alt text](images/payloads_create_payload_3.png)
+* Set payload name, description, and other agent options
+![alt text](images/payloads_create_payload_4.png)
+* Continue to review and create the payload. It can take a couple of minutes for the payload to create.
 * It is generally suggested to deploy the redirector as a service, but it can be ran via cron, .bashrc, or any other mechanism of starting a process.
 
 ## Agents
@@ -64,12 +62,14 @@
 ![alt text](images/home_active_agents.png)
 * To interact with the agent, click on it.
 
-## Searching
+## Agent Page
+### Filters
 * To search for agents, use the filters on the right side of the table.
 * Search by Hostname, IP, or tags.
 * When filtering by tags, use either
     * "Any Tag Match" to OR all selected tags.
     * "All Tags Must Match" to AND selected tags.
+
 ![alt text](images/home_agent_filters.png) 
 
 ### Commands
@@ -88,11 +88,11 @@
 * To receive a file, set the "Path", but do not select a file.
 ![alt text](images/files_receive_file.png)
 * Once the agent is done downloading the file, we can download it to our local machine
-![alt text](images/files_download_file.png)
 * To upload files, set both the "Path" and upload a file.
 ![alt text](images/files_upload_file.png)
 ### Keylogs
 * The Keylog tab is exactly what it sounds like, keylogs from the target machine.
+* There is an included timestamp for each keylog, this time the agent submits the keylogs to the teamserver.
 ![alt text](images/keylogs.png)
 ### Configuration
 * The configuration tab allows the agent to switch between redirectors, and update the callback frequency. This is useful if you need to interact with an agent and don't want to wait many minutes for each callback.
@@ -104,3 +104,27 @@
 ### Tags
 * The tags tab allows you to put identifiers for your agents.
 ![alt text](images/agents_tags.png)
+
+## Files Page
+### Overview
+* The Files page is a read only view for all files uploaded to and downloaded from agents.
+![alt text](images/files_page.png)
+### Filters
+* Similar to the agents page, filters can be applied to find files from specific agents
+![alt text](images/files_page_filters.png)
+
+## Search Page
+### Overview
+* The Search page is for searching all OpenSearch data.
+* This data is sourced from keylogs, and any data sent to agent unix sockets or named pipes.
+* New OpenSearch data is loaded every 15 seconds.
+### Search
+* Similar to the agents and files pages, keylogs can be searched by the agent tags.
+* However, the tag must exist on the agent at the time the keylog was submitted
+![alt text](images/search_keylogs.png)
+* Searches cannot start with a `*`
+* Lets say there is some keylog, `echo "hi keylogger"`
+    * `*cho` is NOT a valid search query for this.
+    * `ech` is NOT a valid search query for this.
+    * `ech*` is a valid search query for this.
+    * `echo` is a valid search query for this.

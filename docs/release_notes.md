@@ -1,5 +1,14 @@
 # Release Notes
 
+## Release 2.0.0
+* Switch gob to protobuf
+* Added OpenSearch and indexer app
+* New agents with named pipes and unix sockets
+* Prometheus metrics endpoint
+* New Files page
+* Keylog search page
+* Various UI improvements
+
 ## Release v1.3.6
 * Patches for frontend
 * Pin postgres version
